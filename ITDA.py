@@ -35,7 +35,7 @@ with st.sidebar:
 # --- Load Dataset ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\manqo\Downloads\archive (2)\iot_traffic_data.csv", header=None)
+    df = pd.read_csv("iot_traffic_data.csv", header=None)
     df.columns = df.iloc[0]
     df = df[1:].reset_index(drop=True)
     df['Timestamp'] = df['Timestamp'].astype(str)
